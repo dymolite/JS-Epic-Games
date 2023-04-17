@@ -1,0 +1,166 @@
+nav {
+  padding: 1rem 0;
+  width: 20%;
+}
+nav .nav-column {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav .nav-body .logo {
+  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+nav .nav-body img {
+  width: 30px;
+  height: 35px;
+}
+nav .nav-body .fa-bars {
+  display: none;
+}
+nav .nav-footer {
+  display: inline-block;
+}
+nav .menu {
+  line-height: 2;
+}
+nav a {
+  color: rgba(245, 245, 245, 0.6);
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #fff;
+}
+
+main {
+  width: 80%;
+  padding-top: 1rem;
+}
+
+#head .sorting {
+  display: flex;
+  align-items: center;
+}
+#head label {
+  color: rgba(245, 245, 245, 0.6);
+}
+#head select {
+  margin-right: 1rem;
+  border-radius: 2px;
+  background-color: #121212;
+  color: #fff;
+  cursor: pointer;
+  border: #121212;
+}
+#head select:focus {
+  border: #fff;
+}
+#head .searching {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgba(245, 245, 245, 0.6);
+  height: 39px;
+  gap: 0.5rem;
+}
+#head .searching i {
+  cursor: pointer;
+}
+#head .searching img {
+  width: 26px;
+  filter: invert(60%);
+  -webkit-filter: invert(60%);
+  cursor: pointer;
+}
+#head .searching input {
+  background-color: #000;
+  filter: invert(20%);
+  color: #fff;
+  border-radius: 2px;
+  height: 35px;
+  border: transparent;
+  outline: none;
+}
+
+#content {
+  padding-top: 2rem;
+  max-height: 100%;
+}
+#content .bought-games {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-content: stretch;
+  gap: 1rem;
+}
+#content img {
+  width: 150px;
+  height: 200px;
+  display: block;
+}
+#content h4 {
+  color: #fff;
+  padding: 0.5rem 0;
+}
+#content p {
+  color: rgba(245, 245, 245, 0.6);
+  font-size: 12px;
+  padding-bottom: 0.5rem;
+}
+#content .opacity {
+  filter: grayscale(100%);
+  opacity: 0.3;
+  transition: 0.2s;
+}
+#content .opacity:hover {
+  opacity: 0.6;
+  filter: grayscale(75%);
+}
+#content .content-title {
+  position: relative;
+}
+#content .content-title::before {
+  content: "";
+  position: absolute;
+  background-color: #292828;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#content .content-item {
+  width: 150px;
+  transition: 0.3s cubic-bezier(0.12, 0.03, 0.1, 0.99);
+}
+#content .content-item:hover .content-title::before {
+  height: 100%;
+}
+
+html {
+  background-color: #121212;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 5%;
+  }
+  nav img {
+    display: none;
+  }
+  nav span {
+    display: none;
+  }
+  nav li {
+    width: 40px;
+  }
+  #head .searching {
+    padding-top: 1.5rem;
+    justify-content: flex-start;
+  }
+}

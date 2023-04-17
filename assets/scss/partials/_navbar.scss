@@ -1,0 +1,42 @@
+nav {
+    padding: 1rem 0;
+    width: 20%;
+    .nav-column {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav-body {
+        
+        .logo{
+            padding-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+        img {
+            width: 30px;
+            height: 35px;
+        }
+        .fa-bars {
+            display: none;
+        }
+    }
+    .nav-footer {
+        display: inline-block;
+    }
+
+    .menu {
+        line-height: 2;
+    }
+    a {
+        color: $primary-color;
+        transition: .3s;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+}
+

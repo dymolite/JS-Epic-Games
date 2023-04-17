@@ -1,0 +1,111 @@
+main {
+    width: 80%;
+    padding-top: 1rem;
+}
+#head {
+    .sorting {
+        display: flex;
+        align-items: center;
+    }
+    label {
+        color: $primary-color;
+    }
+    select {
+        margin-right: 1rem;
+        border-radius: 2px;
+        background-color: $tertiary-color;
+        color: $secondary-color;
+        cursor: pointer;
+        border: $tertiary-color;
+
+        &:focus {
+            border:$secondary-color;
+        }
+    }
+    .searching {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: $primary-color;
+        height: 39px;
+        gap: .5rem;
+        i {
+            cursor: pointer;
+        }
+        img {
+            width: 26px;
+            filter: invert(60%);
+            -webkit-filter: invert(60%);
+            cursor: pointer;
+        }
+        input {
+            background-color: #000;
+            filter: invert(20%);
+            color: $secondary-color;
+            border-radius: 2px;
+            height: 35px;
+            border: transparent;
+            outline: none;
+        }
+    }
+}
+#content {
+    padding-top: 2rem;
+    max-height: 100%;
+    .bought-games {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        align-content: stretch;
+        gap: 1rem;
+    
+    }
+    img {
+        width: 150px;
+        height: 200px;
+        display: block;
+    }
+    h4 {
+        color: $secondary-color;
+        padding: .5rem 0;
+    }
+    p {
+        color: $primary-color;
+        font-size: $font-size-mini;
+        padding-bottom: .5rem;
+    }
+    .opacity {
+        filter: grayscale(100%);
+        opacity: .3;
+        transition: .2s;
+        &:hover {
+            opacity: .6;
+            filter: grayscale(75%);
+        }
+    }
+    .content-title {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #292828;
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+            z-index: -1;
+            overflow: hidden;
+            transition: .5s;
+        }
+    }
+    .content-item {
+        width: 150px;
+        transition: .3s cubic-bezier(.12,.03,.1,.99);
+        
+        &:hover {
+            .content-title::before {
+                height: 100%;
+            }
+        }
+    }
+}

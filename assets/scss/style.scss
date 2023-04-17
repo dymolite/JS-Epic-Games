@@ -1,0 +1,29 @@
+@import "./partials/variables";
+@import "./partials/navbar";
+@import "./partials/main";
+
+html {
+    background-color: $tertiary-color;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 5%;
+        img {
+            display: none;
+        }
+        span {
+            display: none;
+        }
+        li {
+            width: 40px;
+        }
+    }
+    #head {
+        .searching {
+            padding-top: 1.5rem;
+            justify-content: flex-start;
+        }
+    }
+}
